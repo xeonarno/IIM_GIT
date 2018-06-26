@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost';
+$host = '127.0.0.1';
 $dbname = 'IIM_Git_SoundCloud';
-$user = 'username';
-$pass = 'password';
+$user = 'root';
+$pass = '';
 
 
 try{
