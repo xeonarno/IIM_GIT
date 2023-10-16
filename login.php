@@ -15,13 +15,22 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	if(!empty($_POST['email']) && !empty($_POST['password'])){
 
 		// TODO
+		
+		$password = htmlspecialchars($_POST["password"]);
+        $email = htmlspecialchars($_POST["email"]);
+       
 
 		// Force user connection to access dashboard
-		userConnection($db, 'git@initiation.com', 'password');
+		userConnection($db, $email, $password);
+		if (userConnection($db, $email, $password) == true) {
+           header('Location: dashboard.php');
+        }
+ 		else{
+            $error = "Mauvais identifiants";
+        }
 		
-		header('Location: dashboard.php');
 
-	}else{
+		}else{
 		$error = 'Champs requis !';
 	}
 }
