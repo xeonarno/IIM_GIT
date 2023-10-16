@@ -35,7 +35,8 @@ SUMMARY
 				  SET
 				  username = :username,
 				  email = :email,
-				  password = :password";
+				  password = :password,
+				  picture = :picture";
 
 
 		$req = $db->prepare($sql);
@@ -43,6 +44,7 @@ SUMMARY
 			':username' => $username,
 			':email' => $email,
 			':password' => $password,
+			':picture' => ''
 		));
 		
 
