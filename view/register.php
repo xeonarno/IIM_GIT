@@ -13,22 +13,22 @@
 				<form method="POST" action="validation.php">
 					<div class="form-input">
 						<span class="username">
-							<input type="text" name="username" placeholder="Username">
+							<input type="text" name="register_username" placeholder="Username" required>
 						</span>
 					</div>
 					<div class="form-input">
 						<span class="email">
-							<input type="text" name="email" placeholder="Email">
+							<input type="text" name="register_email" placeholder="Email" required>
 						</span>
 					</div>
 					<div class="form-input">
 						<span class="password">
-							<input type="password" name="password" placeholder="Password">
+							<input type="password" name="register_password" placeholder="Password" required>
 						</span>
 					</div>
 
 					<div class="form-submit">
-						<input type="submit" value="Je m'inscris !">	
+						<input type="submit" name="register" value="Je m'inscris !">
 					</div>
 					<p class="account">Vous avez un compte ? <a href="login.php">Connectez-vous !</a></p>
 				</form>
