@@ -1,5 +1,5 @@
 <?php session_start();
-require('config/config.php');
+require('config/config-sample.php');
 require('model/functions.fn.php');
 
 /*===============================
