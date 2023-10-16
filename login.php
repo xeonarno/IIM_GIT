@@ -11,15 +11,21 @@ require('model/functions.fn.php');
 			PROCESS
 ********************************/
 
-if(isset($_POST['email']) && isset($_POST['password'])){
-	if(!empty($_POST['email']) && !empty($_POST['password'])){
+if(isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])){
+	if(!empty($_POST['emailLogin']) && !empty($_POST['passwordLogin'])){
 
 		// TODO
 
 		// Force user connection to access dashboard
-		userConnection($db, 'git@initiation.com', 'password');
+		 $userConnection = userConnection($db, 'git@initiation.com', 'password');
+
+         if ($userConnection) {
+             header('Location: dashboard.php');
+         } else {
+             $error = "Wrong identifier";
+         }
 		
-		header('Location: dashboard.php');
+
 
 	}else{
 		$error = 'Champs requis !';
